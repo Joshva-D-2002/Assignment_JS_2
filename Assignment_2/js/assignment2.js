@@ -25,9 +25,11 @@ const arr1= ['car', 1, 5, 'js', 'node js', 'mysql', 'sql' ];
 const arr3 = arr1.map((element) =>{
     switch(typeof element){
         case 'number':
+        case 'bigint':
+        case 'boolean':
             console.log(element);
             return String(element);
-        default:
+        default :
             console.log(element);
             return element;
     }

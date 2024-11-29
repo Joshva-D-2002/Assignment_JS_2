@@ -22,14 +22,16 @@ for(let i=1;i<=5;i++){
 
 const arr1= ['car', 1, 5, 'js', 'node js', 'mysql', 'sql' ];
 
-arr1.map((element) =>{
-    switch(element){
+const arr3 = arr1.map((element) =>{
+    switch(typeof element){
+        case 'number':
+            console.log(element);
+            return String(element);
         default:
             console.log(element);
-            break;
+            return element;
     }
 });
-
 
 // 3. [1, 2, 3, 4. 5, 6] : Write a closure function to delete indexes 5 and 2 of this array.
 
@@ -54,12 +56,12 @@ class Iteration{
             console.log(element);
         });
     }
-};
+}
 
-new Iteration(arr2);
+let iteration1 = new Iteration(arr2);
 
 // 5. Create a self-invoking function to console you name.
 
 (function(name){
     console.log(`My Name is ${name}`)
-})("Joshva D");
+})("Joshva");
